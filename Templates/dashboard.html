@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker Dashboard</h1>
+    <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount">
+        <button id="add-button">Add</button>
+        <button id="remove-button">Remove</button>
+    </div>
+    <div id="bar-chart"></div>
+    <div id="total-expense"></div>
+    <div id="table"></div>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

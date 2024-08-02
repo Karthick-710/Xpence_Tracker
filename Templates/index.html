@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <form method="POST">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br>
+        <label for="action">Action:</label>
+        <select id="action" name="action">
+            <option value="Add">Add</option>
+            <option value="Remove">Remove</option>
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        {{ expenses | safe }}
+
+    </div>
+</body>
+</html>
